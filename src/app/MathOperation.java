@@ -6,7 +6,8 @@ interface MathOperation {
 }
 
 class AnonimousExample {
-    public static void main(String[] args) {
+
+    void executeOperation() {
         MathOperation mathOperation = new MathOperation() {
             @Override
             public int operate(int a, int b) {
@@ -14,6 +15,7 @@ class AnonimousExample {
             }
         };
 
-        System.out.println("Addition result: " + mathOperation.operate(4, 7));
+        int result = mathOperation.operate(4, 7);
+        System.out.println("Addition result: " + result);
     }
 }
